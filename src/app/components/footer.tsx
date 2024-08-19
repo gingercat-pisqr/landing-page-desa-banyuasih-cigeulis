@@ -1,9 +1,11 @@
 import Link from "next/link";
 
 // Icon
-import LocationOnRoundedIcon from '@mui/icons-material/LocationOnRounded';
-import MailOutlineRoundedIcon from '@mui/icons-material/MailOutlineRounded';
-import CallOutlinedIcon from '@mui/icons-material/CallOutlined';
+import {
+    LocationOnRounded,
+    MailOutlineRounded,
+    CallOutlined
+} from '@mui/icons-material';
 
 const Footer = () => {
     return(
@@ -49,7 +51,7 @@ const Footer = () => {
                 >
                     <div className="mb-3"
                     >
-                        <MailOutlineRoundedIcon/>
+                        <MailOutlineRounded/>
                         <Link className="text-base ml-2"
                             href={"mailto:desabanyuasih5@gmail.com"}
                             type="mail"
@@ -60,7 +62,7 @@ const Footer = () => {
 
                     <div
                     >
-                        <CallOutlinedIcon/>
+                        <CallOutlined/>
                         <Link className="text-base ml-2"
                             href={"tel:+6285212726730"}
                             type="tel"
@@ -80,7 +82,7 @@ const Footer = () => {
                     
                     <div className="flex flex-row"
                     >
-                        <LocationOnRoundedIcon/>
+                        <LocationOnRounded/>
                         <p>
                             Desa Banyuasih, Kec. Cigeulis, Kab. Pandegalng, Banten, 42282
                         </p>

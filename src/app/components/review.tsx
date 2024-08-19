@@ -8,7 +8,7 @@ interface Parameter {
     readonly deskripsi: string
 }
 
-import StarRateRoundedIcon from '@mui/icons-material/StarRateRounded';
+import { StarRateRounded } from '@mui/icons-material';
 
 const Review = ({nama, tanggal, foto_profil, rating, deskripsi}:Parameter) => {
     return(
@@ -41,7 +41,7 @@ const Review = ({nama, tanggal, foto_profil, rating, deskripsi}:Parameter) => {
 
                 <div>
                     {
-                        [...Array(rating)].map((e, i) => <StarRateRoundedIcon style={{color:"#facd18"}}/>)
+                        [...Array(rating)].map((e, i) => <StarRateRounded style={{color:"#facd18"}}/>)
                     }
                 </div>
             </div>

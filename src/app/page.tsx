@@ -4,8 +4,12 @@ import Link from "next/link";
 import { useRef, useEffect } from "react"
 
 //Icon
-import LocationOnRoundedIcon from '@mui/icons-material/LocationOnRounded';
-import WatchRoundedIcon from '@mui/icons-material/WatchRounded';
+import {
+  LocationOnRounded,
+  WatchRounded
+} from '@mui/icons-material';
+
+// Components
 import Card from "./components/card";
 import Galery from "./components/galery";
 import Review from "./components/review";
@@ -60,7 +64,7 @@ const Home = () => {
           >
             <div className="flex flex-row mb-4"
             >
-              <LocationOnRoundedIcon/>
+              <LocationOnRounded/>
               <p>
                 <b>Lokasi:</b>
                 <Link
@@ -77,7 +81,7 @@ const Home = () => {
 
             <div className="flex flex-row mb-4"
             >
-              <WatchRoundedIcon/>
+              <WatchRounded/>
               <p>
                 <b>Waktu tempuh:</b>
                 <Link

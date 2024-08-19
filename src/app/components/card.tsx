@@ -4,9 +4,11 @@ import { useRef, useEffect } from "react";
 
 
 //Icons
-import FavoriteRoundedIcon from '@mui/icons-material/FavoriteRounded';
-import StarRateRoundedIcon from '@mui/icons-material/StarRateRounded';
-import LocationOnRounded from "@mui/icons-material/LocationOnRounded";
+import {
+    FavoriteRounded,
+    StarRateRounded,
+    LocationOnRounded
+} from '@mui/icons-material';
 
 interface Parameter {
     readonly gambar: string;
@@ -62,11 +64,11 @@ const Card = ({gambar, harga_tiket, nama_wisata, rating, lokasi, jumlah_review}:
                     >
                         <div className="flex flex-row">
                             <span className="text-base text-[#6F7980] font-bold">{rating}</span>
-                            <StarRateRoundedIcon
+                            <StarRateRounded
                                 style={{color:"#facd18"}}
                             />
                         </div>
-                        <FavoriteRoundedIcon/>
+                        <FavoriteRounded/>
                     </div>
                 </div>
                 

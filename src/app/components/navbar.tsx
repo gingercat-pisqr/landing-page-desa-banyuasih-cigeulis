@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 
 // Icon
-import MenuOutlinedIcon from '@mui/icons-material/MenuOutlined';
+import { MenuOutlined } from '@mui/icons-material';
 
 const Navbar = () => {
     const [state, setState] = useState(0);
@@ -17,7 +17,7 @@ const Navbar = () => {
             <button className="absolute left-0 sm:hidden block"
                 onClick={()=>(showMenu())}
             >
-                <MenuOutlinedIcon
+                <MenuOutlined
                     style={{color:"#059AA3"}}
                 />
             </button>
