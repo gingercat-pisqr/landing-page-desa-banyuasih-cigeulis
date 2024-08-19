@@ -41,7 +41,7 @@ const Review = ({nama, tanggal, foto_profil, rating, deskripsi}:Parameter) => {
 
                 <div>
                     {
-                        [...Array(rating)].map((e, i) => <StarRateRounded style={{color:"#facd18"}}/>)
+                        [...Array(rating)].map((e, i) => <StarRateRounded key={i} style={{color:"#facd18"}}/>)
                     }
                 </div>
             </div>
