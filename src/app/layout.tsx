@@ -10,7 +10,13 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Desa Banyuasih Cigeulis",
   description: "Website Profil Desa Banyuasih Cigeulis Pandeglang",
-  authors: [{name:"KKM 61 PKN STAN"}]
+  authors: [{name:"Rakha Mulia Pratama"}],
+  creator: "Rakha Mulia Pratama",
+  keywords: ["Pantai", "Beach", "Banyuasih", "Cigeulis", "Pandeglang", "Banten", "Wisata", "Karang", "Desa Wisata", "Wonderful Indonesia", ""],
+  icons: [{
+    url: "/favicon.ico",
+    href: "/favicon.ico"
+  }]
 };
 
 export default function RootLayout({

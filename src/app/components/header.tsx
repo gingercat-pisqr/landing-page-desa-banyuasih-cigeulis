@@ -19,7 +19,7 @@ const Header = () => {
                     Pesona Alam yang Memikat, Kenangan yang Abadi!
                 </p>
 
-                <Link className="bg-gradient-to-r from-[#F39B46] to-[#ffbe82] rounded-full py-2 px-4 shadow-2xl hover:scale-90 transition-all ease-in-out"
+                <Link className="bg-gradient-to-r from-[#F39B46] to-[#ffbe82] rounded-full py-4 px-8 shadow-2xl hover:scale-90 transition-all ease-in-out"
                     href={"/#deskripsi"}
                 >
                     Mulai berselancar!

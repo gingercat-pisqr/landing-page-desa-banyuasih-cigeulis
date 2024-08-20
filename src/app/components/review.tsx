@@ -1,6 +1,7 @@
 import Image from "next/image";
 
 interface Parameter {
+    readonly id: string
     readonly nama: string,
     readonly tanggal: string,
     readonly foto_profil: string,
@@ -10,9 +11,10 @@ interface Parameter {
 
 import { StarRateRounded } from '@mui/icons-material';
 
-const Review = ({nama, tanggal, foto_profil, rating, deskripsi}:Parameter) => {
+const Review = ({id, nama, tanggal, foto_profil, rating, deskripsi}:Parameter) => {
     return(
-        <div className="sm:w-96 h-64 flex flex-col bg-white p-4 text-[#6F7980]"
+        <div className="w-96 h-64 flex flex-col bg-white p-4 text-[#6F7980] sm:mb-0 mb-3 mr-6 shadow-sm"
+            id={id}
         >
             <div className="flex flex-row justify-between"
             >
@@ -22,12 +24,12 @@ const Review = ({nama, tanggal, foto_profil, rating, deskripsi}:Parameter) => {
                         width={1000}
                         height={1000}
                         src={foto_profil}
-                        alt=""
+                        alt="Foto profil"
                     />
 
-                    <div className="flex flex-col sm:mr-7"
+                    <div className="flex flex-col ml-2 overflow-hidden"
                     >
-                        <span className="text-base"
+                        <span className="text-base w-36 text-clip"
                         >
                             {nama}
                         </span>
@@ -46,7 +48,7 @@ const Review = ({nama, tanggal, foto_profil, rating, deskripsi}:Parameter) => {
                 </div>
             </div>
 
-            <div className=""
+            <div className="overflow-y-scroll text-justify"
             >
                 <p>
                     {deskripsi}

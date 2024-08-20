@@ -7,7 +7,8 @@ import { useRef, useEffect } from "react";
 import {
     FavoriteRounded,
     StarRateRounded,
-    LocationOnRounded
+    LocationOnOutlined,
+    GroupsOutlined
 } from '@mui/icons-material';
 
 interface Parameter {
@@ -15,11 +16,12 @@ interface Parameter {
     readonly harga_tiket: string; 
     readonly nama_wisata: string;
     readonly lokasi: string;
-    readonly rating: string;
-    readonly jumlah_review: string;
+    readonly rating: number;
+    readonly jumlah_review: number;
+    readonly gmaps: string
 }
 
-const Card = ({gambar, harga_tiket, nama_wisata, rating, lokasi, jumlah_review}:Parameter) => {
+const Card = ({gambar, harga_tiket, nama_wisata, rating, lokasi, jumlah_review, gmaps}:Parameter) => {
     const fadeIn = useRef<HTMLDivElement|null>(null);
     useEffect(()=>{
         const options = {
@@ -44,10 +46,10 @@ const Card = ({gambar, harga_tiket, nama_wisata, rating, lokasi, jumlah_review}:
     },[]);
 
     return(
-        <div className="bg-white"
+        <div className="bg-white sm:w-96 w-full shadow-sm"
             ref={fadeIn}
         >
-            <Image className="w-96 h-64"
+            <Image className="w-full h-64 object-cover"
                 width={1000}
                 height={1000}
                 src={gambar}
@@ -58,7 +60,7 @@ const Card = ({gambar, harga_tiket, nama_wisata, rating, lokasi, jumlah_review}:
                 <div className="flex flex-row justify-between items-center mb-3"
                 >
                     <h4 className="font-bold text-2xl text-[#059AA3]"
-                    >Rp{harga_tiket} / orang</h4>
+                    >Rp{harga_tiket} / kendaraan</h4>
                     
                     <div className="flex flex-row"
                     >
@@ -68,7 +70,9 @@ const Card = ({gambar, harga_tiket, nama_wisata, rating, lokasi, jumlah_review}:
                                 style={{color:"#facd18"}}
                             />
                         </div>
-                        <FavoriteRounded/>
+                        <FavoriteRounded
+                            style={{color: "#6F7980"}}
+                        />
                     </div>
                 </div>
                 
@@ -84,12 +88,24 @@ const Card = ({gambar, harga_tiket, nama_wisata, rating, lokasi, jumlah_review}:
                 
                 <div className="flex flex-row"
                 >
+                    <div className="text-[#6F7980] bg-[#EEF5F6] flex flex-row items-center p-2 mr-2"
+                    >
+                        <LocationOnOutlined/>
+                        <Link className="text-base ml-2"
+                            href={gmaps}
+                        >
+                            {lokasi}
+                        </Link>
+                    </div>
+
                     <div className="text-[#6F7980] bg-[#EEF5F6] flex flex-row items-center p-2"
                     >
-                        <LocationOnRounded/>
-                        <Link className="text-base ml-2"
-                            href={""}
-                        >{lokasi}</Link>
+                        <GroupsOutlined 
+                        />
+                        <span className="text-base ml-2"
+                        >
+                            {jumlah_review}
+                        </span>
                     </div>
                 </div>
             </div>

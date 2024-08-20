@@ -10,11 +10,11 @@ const Navbar = () => {
     function showMenu() {
         state == 0? setState(1):setState(0);
     }
-    console.log(state)
+
     return(
-        <nav className="items-center flex w-screen py-2 z-50 top-0 bg-[#EEF5F6] text-[#6F7980] fixed"
+        <nav className="items-center flex w-screen py-2 z-50 top-0 bg-[#EEF5F6] text-[#6F7980] fixed shadow-sm"
         >
-            <button className="absolute left-0 sm:hidden block"
+            <button className="absolute left-0 sm:hidden block ml-2"
                 onClick={()=>(showMenu())}
             >
                 <MenuOutlined

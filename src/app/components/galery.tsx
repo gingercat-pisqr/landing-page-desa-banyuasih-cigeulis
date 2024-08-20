@@ -8,16 +8,16 @@ interface Parameter {
 
 const Galery = ({judul, tanggal, gambar}:Parameter) => {
     return(
-        <div className="sm:w-96 w-full h-fit relative"
+        <div className="sm:w-96 w-full h-fit relative sm:m-3 my-2 shadow-sm"
         >
-            <Image className="-z-10"
+            <Image className="-z-10 object-cover"
                 width={1000}
                 height={1000}
                 src={gambar}
                 alt="Gambar"
             />
 
-            <div className="mask-image-to-top bg-black py-2 pt-6 bg-opacity-35 absolute bottom-0 z-10 text-white text-center w-full"
+            <div className="mask-image-to-top bg-[#059AA3] py-2 pt-6 bg-opacity-30 absolute bottom-0 z-10 text-white text-center w-full"
             >
                 <h3>
                     {judul}
